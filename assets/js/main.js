@@ -24,7 +24,7 @@ function generate_markup(array){
 
                             <!-- TESTO -->
                             <div class="card_description">
-                                <p> ${date} ${title}
+                                <p class="d_flex"> <span class="image_date">${date}</span> <span class="image_title">${title}</span> 
                                 </p>
                             </div>
                         </div>
