@@ -1,6 +1,6 @@
 //! FUNCTIONS
 
-function generate_markup(array){
+function generate_markup(array, node_El){
 
     array.forEach((element) => {
         const {title, url, date} = element;
@@ -13,7 +13,7 @@ function generate_markup(array){
 
                             <!-- IMAGE -->
                             <div class="card_image">
-                                <img class="" src=" ${url} " alt="image_${title}">
+                                <img class="" src="${url}" alt="image_${title}">
                             </div>
 
                             <!-- PIN -->
@@ -23,14 +23,18 @@ function generate_markup(array){
 
                             <!-- TESTO -->
                             <div class="card_description">
-                                <p>  </p>
+                                <p> ${date} 
+                                ${title}
+                                </p>
                             </div>
                         </div>
                     </div>
                     <!-- FINE COLONNA  -->
         `
         
-        console.log(element.title);
+        console.log( element.date, element.title, url);
+
+        node_El.
         
     })
 
@@ -42,6 +46,7 @@ function generate_markup(array){
 
 
 const img_generator = 'https://lanciweb.github.io/demo/api/pictures/'
+const row_El = document.querySelector('row')
 
 fetch(img_generator)
 .then(res => res.json())
@@ -50,5 +55,5 @@ fetch(img_generator)
         
     }) 
     
-    generate_markup(data)
+    generate_markup(data, row_El)
 })
