@@ -110,6 +110,7 @@ header{
     background-color: white;
     padding: 1rem;
     position: relative;
+    box-shadow: 2px 2px 2px #000000;
     
 }
 
@@ -124,5 +125,6 @@ header{
     position: absolute;
     top: 0%;
     right: 45%;
+    
     
 }
