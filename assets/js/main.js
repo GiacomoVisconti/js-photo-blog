@@ -7,7 +7,7 @@ function generate_markup(array){
         const {title, url, date} = element;
         const markup = `
                     <!-- INIZIO COLONNA -->
-                    <div class="col_4">
+                    <div class="col_4 col_md_6 col_sm_12">
 
                         <!-- CARD -->
                         <div class="card">
