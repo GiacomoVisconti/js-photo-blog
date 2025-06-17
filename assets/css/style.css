@@ -1,0 +1,124 @@
+/* *RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px dashed red;
+}
+
+
+/* SELEZIONE DEL FONT DELLA PAGINA */
+body{
+    font-family: "Edu Tas Beginner", sans-serif;
+}
+
+
+/* UTILS */
+
+.container{
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* #region Columns */
+
+.col_1 {
+    width: calc(100% / 12 * 1);
+}
+.col_2 {
+    width: calc(100% / 12 * 2);
+}
+.col_3 {
+    width: calc(100% / 12 * 3);
+}
+.col_4 {
+    width: calc(100% / 12 * 4);
+}
+.col_5 {
+    width: calc(100% / 12 * 5);
+}
+.col_6 {
+    width: calc(100% / 12 * 6);
+}
+.col_7 {
+    width: calc(100% / 12 * 7);
+}
+.col_8 {
+    width: calc(100% / 12 * 8);
+}
+.col_9 {
+    width: calc(100% / 12 * 9);
+}
+.col_10 {
+    width: calc(100% / 12 * 10);
+}
+.col_11 {
+    width: calc(100% / 12 * 11);
+}
+.col_12 {
+    width: calc(100% / 12 * 12);
+}
+
+/* #endregion Columns */
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.d_flex{
+    display: flex;
+}
+
+/* GENERICS */
+
+img{
+    width: 100%;
+}
+
+/*! HEADER */
+header{
+    background-image: url('../img/wall.png');
+    display: flex;
+    padding: 1rem;
+    font-size: 2rem;
+    justify-content: center;
+
+}
+
+/*! MAIN */
+main{
+    background-image: url("../img/cork.png");
+}
+
+.card_container{
+    margin: 2rem 0;
+    
+}
+
+.card{
+    background-color: white;
+    padding: 1rem;
+    position: relative;
+    
+}
+
+.card_description{
+    padding: 1rem 0;
+}
+
+.pin_container{
+    
+}
+.pin{
+    margin-top: -0.9rem;
+    width: 10%;
+    border: 0;
+    position: absolute;
+    top: 0%;
+    right: 45%;
+    
+}
