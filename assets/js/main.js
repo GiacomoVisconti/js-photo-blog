@@ -87,6 +87,44 @@ function generate_markup(array){
 
         row_El.appendChild(div_El)
         
+        card_El.addEventListener('click', () => {
+
+            
+
+            const modal_El = document.getElementById('modal_container')
+            modal_El.classList.add('modal')
+
+            const modal_markup = `
+            <div>
+                <button class="modal_button">Chiudi</button>
+            </div>
+
+            <!-- CARD -->
+            <div class="card">
+
+                <!-- IMAGE -->
+                <div class="card_image">
+                    <img class="" src=" ${url} " alt="image_ ${title}">
+                </div>
+
+                <!-- TESTO -->
+                <div class="card_description">
+                    <p class="d_flex"> <span class="image_date">${date}</span> <span class="image_title">${title}</span>
+                    </p>
+                </div>
+            </div>
+            `
+            modal_El.innerHTML = modal_markup
+            modal_El.classList.remove('d_none')
+            
+            const modal_button_El = document.querySelector('.modal_button')
+            
+            modal_button_El.addEventListener('click', () => {
+                modal_El.classList.remove('modal')
+                modal_El.classList.add('d_none')
+            })
+
+        })
         
 
     })
@@ -105,4 +143,7 @@ fetch(img_generator)
 .then(res => res.json())
 .then((data)=>{
     generate_markup(data);
+
+
 })
+
