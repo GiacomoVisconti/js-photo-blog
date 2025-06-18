@@ -72,7 +72,11 @@ img{
 }
 
 body{
-    background-image: url("../img/cork.png");
+    background-image: url(../img/cork.png);
+    position: relative;
+    
+    
+    
 }
 
 p{
@@ -101,16 +105,37 @@ header{
 
 /*! MAIN */
 
+main{
+    z-index: 99;
+}
+
 .card_container{
     margin: 2rem 0;
     
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transform: rotate(10deg);
+    .pin_container{
+        display: none;
+    }
+
+    box-shadow: 4px 4px 4px black;
+    
+}
+
+.modal_button:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .card{
     background-color: white;
     padding: 1rem;
     position: relative;
-    box-shadow: 2px 2px 2px #000000;
+    box-shadow: 2px 2px 2px gray;
     
 }
 
@@ -125,6 +150,57 @@ header{
     position: absolute;
     top: 0%;
     right: 45%;
+    
+    
+}
+
+/*! OVERLAY */
+
+.d_none{
+    display: none;
+}
+
+
+
+.modal{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .card{
+        /* margin: -1rem; */
+        transform: scale(0.8);
+    }
+
+    .card_image{
+        img{
+            width: 100%;
+
+        }
+    }
+
+    .pin_container{
+        display: none;
+    }
+
+    .modal_button{
+        padding-top: 1rem;
+        font-size: 2rem;
+        color: white;
+        border: transparent;
+        background-color: transparent;
+        font-weight: 700;
+    }
+    
     
     
 }
@@ -217,5 +293,11 @@ header{
     }
 
     /*#endregion columns*/
+    .modal{
+        .card{
+
+            transform: scale(0.8);
+        }
+    }
 }
 
