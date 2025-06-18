@@ -114,11 +114,28 @@ main{
     
 }
 
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transform: rotate(10deg);
+    .pin_container{
+        display: none;
+    }
+
+    box-shadow: 4px 4px 4px black;
+    
+}
+
+.modal_button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .card{
     background-color: white;
     padding: 1rem;
     position: relative;
-    box-shadow: 2px 2px 2px #000000;
+    box-shadow: 2px 2px 2px gray;
     
 }
 
@@ -160,7 +177,7 @@ main{
     background-color: rgba(0, 0, 0, 0.8);
 
     .card{
-        margin-top: 2rem;
+        /* margin: -1rem; */
         transform: scale(0.8);
     }
 
@@ -176,8 +193,12 @@ main{
     }
 
     .modal_button{
-        padding: 0.5rem 0.8rem;
-        font-size: 1rem;
+        padding-top: 1rem;
+        font-size: 2rem;
+        color: white;
+        border: transparent;
+        background-color: transparent;
+        font-weight: 700;
     }
     
     

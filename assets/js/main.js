@@ -95,13 +95,13 @@ function generate_markup(array){
             modal_El.classList.add('modal')
 
             const modal_markup = `
-            <div>
-                <button class="modal_button">Chiudi</button>
-            </div>
-
+            
             <!-- CARD -->
+            <div>
+                <button class="modal_button"><i class="fa-solid fa-xmark"></i></button>
+            </div>
             <div class="card">
-
+                
                 <!-- IMAGE -->
                 <div class="card_image">
                     <img class="" src=" ${url} " alt="image_ ${title}">
@@ -112,6 +112,7 @@ function generate_markup(array){
                     <p class="d_flex"> <span class="image_date">${date}</span> <span class="image_title">${title}</span>
                     </p>
                 </div>
+                
             </div>
             `
             modal_El.innerHTML = modal_markup
