@@ -16,6 +16,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
+
+    <!-- CDN FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -24,6 +29,38 @@
         <h1>ESTATE '24</h1>
     </header>
     <main>
+        <!-- OVERLAY -->
+        <div class="modal d_none">
+            <div>
+                <button class="modal_button">Chiudi</button>
+            </div>
+            <!-- INIZIO COLONNA -->
+            <div class="col_4 col_md_6 col_sm_12">
+
+                <!-- CARD -->
+                <div class="card">
+
+                    <!-- IMAGE -->
+                    <div class="card_image">
+                        <img class="" src="./assets/img/wall.png" alt="image_ ${title}">
+                    </div>
+
+                    <!-- PIN -->
+                    <div class="pin_container">
+                        <img class="pin" src="./assets/img/pin.svg" alt="pin">
+                    </div>
+
+                    <!-- TESTO -->
+                    <div class="card_description">
+                        <p class="d_flex"> <span class="image_date">${date}</span> <span
+                                class="image_title">${title}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- FINE COLONNA  -->>
+        </div>
+
         <div class="container">
             <div class="card_container">
 
